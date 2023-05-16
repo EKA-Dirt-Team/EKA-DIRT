@@ -1,0 +1,4 @@
+repository "Daigas Super Foršā Spēle 2.0@Medn1s@cloud"
+  path "/"
+    br "/main"
+    co "/main"
