@@ -22,6 +22,10 @@ public class GroovyAntMovey : MonoBehaviour
 
     void Update()
     {
+        
+        //lock rotation
+        transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y,0);
+        
         //player movement
         var movement = Input.GetAxis("Horizontal");
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
