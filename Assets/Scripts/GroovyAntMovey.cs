@@ -20,17 +20,23 @@ public class GroovyAntMovey : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
+    void FixedUpdate() {
+        // Player Movement
+        var movement = Input.GetAxis("Horizontal");
+        _rigidbody.velocity = new Vector2(movement * MovementSpeed, _rigidbody.velocity.y);
+
+        // Check if moving right or left
+        if (movement < 0 && facingRight) Flip();
+        if (movement > 0 && !facingRight) Flip();
+
+        // Changes Speed float for player animator
+        animatorName.SetFloat("Speed", Mathf.Abs(movement));
+    }
+
     void Update()
     {
-        
-        //lock rotation
-        transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y,0);
-        
-        //player movement
-        var movement = Input.GetAxis("Horizontal");
-        transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
 
-        //player jump
+        // Player jump
         if (Input.GetButtonDown("Jump") && Mathf.Abs(_rigidbody.velocity.y) < 0.001f)
         {
             _rigidbody.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
@@ -38,30 +44,26 @@ public class GroovyAntMovey : MonoBehaviour
             animatorName.SetBool("IsJumping", true);
         }
 
-        //tells unity that character has stopped jumping (i think)
+        // Tells unity that character has stopped jumping (i think)
         if (Mathf.Abs(_rigidbody.velocity.y) < 0.001f)
         {
             animatorName.SetBool("IsJumping", false);
         }
 
-        //check if moving right or left
-        if (movement < 0 && facingRight) Flip();
-        if (movement > 0 && !facingRight) Flip();
-
-        //changes Speed float for player animator
-        animatorName.SetFloat("Speed", Mathf.Abs(movement));
-
-        //checks if player is jumping
-        void OnLanding()
-        {
-            animatorName.SetBool("IsJumping", false);
-        }
-
-        //flip function
-        void Flip()
-        {
-            facingRight = !facingRight;
-            transform.Rotate(Vector3.up * 180);
-        }
     }
+
+    // checks if player is jumping
+    void OnLanding()
+    {
+        animatorName.SetBool("IsJumping", false);
+    }
+
+    //flip function
+    void Flip()
+    {
+        facingRight = !facingRight;
+        transform.Rotate(Vector3.up * 180);
+    }
+
+
 }
