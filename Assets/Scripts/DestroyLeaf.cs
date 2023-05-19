@@ -6,7 +6,8 @@ using TMPro;
 public class DestroyLeaf : MonoBehaviour
 {
     public TextMeshProUGUI textLeaves;
-
+    public GameObject player;
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Pickup"))
