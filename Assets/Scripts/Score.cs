@@ -9,9 +9,12 @@ public class Score : MonoBehaviour
     public float maxleaves = 0;
     public string regularText = "{0}/{1}";
     public string winText = "You Win!";
+    public GameObject TextUIText;
+    public GameObject MenuUIText;
     
     // Private Score Variables
-    TextMeshProUGUI textLeaves;
+    TextMeshProUGUI textLeavesGame;
+    TextMeshProUGUI textLeavesMenu;
     private float leaves = 0;
     
     // Start is called before the first frame update
@@ -22,7 +25,8 @@ public class Score : MonoBehaviour
 
     private void Start()
     {
-        textLeaves = GetComponent<TextMeshProUGUI>();
+        textLeavesGame = TextUIText.GetComponent<TextMeshProUGUI>();
+        textLeavesMenu = MenuUIText.GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
@@ -30,12 +34,14 @@ public class Score : MonoBehaviour
     {
         if (leaves >= maxleaves)
         {
-            textLeaves.text = winText;
+            textLeavesGame.text = winText;
+            textLeavesMenu.text = winText;
         }
         else
         {
-            var textString = String.Format(regularText, leaves, maxleaves);
-            textLeaves.text = textString;
+            var textString = string.Format(regularText, leaves, maxleaves);
+            textLeavesGame.text = textString;
+            textLeavesMenu.text = textString;
         }
 
 
