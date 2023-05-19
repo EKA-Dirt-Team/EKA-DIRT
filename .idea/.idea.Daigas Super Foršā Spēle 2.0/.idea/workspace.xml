@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f32ed511-7fe0-42e3-a5ed-5658de411202" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Daigas Super Foršā Spēle 2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Daigas Super Foršā Spēle 2.0/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/dads.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/dads.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DestroyLeaf.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DestroyLeaf.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GroovyAntMovey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GroovyAntMovey.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +44,7 @@
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/Builds\EKA - DIRT.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Builds/EKA - DIRT.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Reinis\Daigas Super Foršā Spēle 2.0\Builds" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -101,7 +98,7 @@
       <updated>1684445456945</updated>
       <workItem from="1684445460142" duration="82000" />
       <workItem from="1684445609951" duration="1213000" />
-      <workItem from="1684490158358" duration="9324000" />
+      <workItem from="1684490158358" duration="10521000" />
     </task>
     <servers />
   </component>

@@ -9,10 +9,9 @@ public class GroovyAntMovey : MonoBehaviour
     public float MovementSpeed = 30;
     public float JumpForce = 10;
     public float Friction = 0.5f;
-    public float JumpCheckDistance = -0.5f;
-    
-    public Animator animatorName;
+    public float JumpCheckDistance = -5.3f;
 
+    public Animator animatorName;
     
     // Main player rigidbody
     private Rigidbody2D PlayerRigidbody;
@@ -21,10 +20,10 @@ public class GroovyAntMovey : MonoBehaviour
     private bool facingRight = true;
     
     // Jump variables
-    private float jumpTime = 0;
     private bool isGrounded = false;
     private bool isJumping = false;
     private Vector2 extents;
+    private float groundTime;
 
     void Start()
     {
@@ -47,14 +46,8 @@ public class GroovyAntMovey : MonoBehaviour
         Movement(horizontal);
         
         // Ground check 
-        if (Physics2D.OverlapBox(transform.position - Vector3.down * JumpCheckDistance,extents , 0, LayerMask.GetMask("Ground")))
-        {
-            isGrounded = true;
-        }
-        else
-        {
-            isGrounded = false;
-        }
+        isGrounded = Physics2D.OverlapBox(transform.position - Vector3.down * JumpCheckDistance,
+            extents, 0, LayerMask.GetMask("Ground"));
     }
     
     void Update()
@@ -63,6 +56,7 @@ public class GroovyAntMovey : MonoBehaviour
         if (isGrounded)
         {
             isJumping = false;
+            groundTime += Time.deltaTime;
         }
 
         // Jump input
@@ -112,10 +106,11 @@ public class GroovyAntMovey : MonoBehaviour
     
     private void Jump()
     {
-        if (isJumping) return;
+        if (isJumping || groundTime < 0.05F) return;
         // Apply an impulse force upwards
         PlayerRigidbody.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
         isJumping = true;
+        groundTime = 0;
     }
 
     private void OnDrawGizmosSelected()
