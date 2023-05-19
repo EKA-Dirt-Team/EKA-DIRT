@@ -10,12 +10,12 @@ public class FadeIn : MonoBehaviour
     public Image BlackScreenImage;
     
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         BlackScreenImage = BlackScreen.GetComponent<Image>();
-        StartCoroutine(FadeInFun());  
+        StartCoroutine(FadeInFun());
     }
-    
+
     private IEnumerator FadeInFun()
     {
         BlackScreen.SetActive(true);

@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f32ed511-7fe0-42e3-a5ed-5658de411202" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Daigas Super Foršā Spēle 2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Daigas Super Foršā Spēle 2.0/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FadeIn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FadeIn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/comic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/comic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +20,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FadeIn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MenuOptions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Score.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ShowBackground.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2Pz2BTBLORNKjxpD0pOeGIulhrt" />
   <component name="ProjectViewState">

@@ -14,7 +14,7 @@ public class comic : MonoBehaviour
 	public Button imagedisplay;
 
 	private int slaids = 0;
-
+	
 	public void ChangeButtonImage()
 	{
 		slaids += 1;
