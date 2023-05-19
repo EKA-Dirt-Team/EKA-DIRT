@@ -5,16 +5,14 @@ using TMPro;
 
 public class DestroyLeaf : MonoBehaviour
 {
-    private float leaves = 0;
     public TextMeshProUGUI textLeaves;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Pickup"))
         {
-            Debug.Log("boop");
-            leaves++;
-            textLeaves.text = leaves.ToString();
+            Debug.Log("Leaf Collected");
+            textLeaves.GetComponent<Score>().AddLeaf();
             Destroy(collision.gameObject);
         }
     }
