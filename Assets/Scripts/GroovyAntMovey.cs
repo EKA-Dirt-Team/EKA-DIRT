@@ -25,7 +25,7 @@ public class GroovyAntMovey : MonoBehaviour
     private Vector2 extents;
     private float groundTime;
 
-    void Start()
+    private void Start()
     {
         PlayerRigidbody = GetComponent<Rigidbody2D>();
         extents = GetComponent<BoxCollider2D>().bounds.size;
@@ -33,10 +33,10 @@ public class GroovyAntMovey : MonoBehaviour
         extents.y = 0.5f;
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         // Get the horizontal input
-        float horizontal = Input.GetAxis("Horizontal");
+        var horizontal = Input.GetAxis("Horizontal");
         
         // Player sprite flip
         if (horizontal > 0 && !facingRight) Flip();
@@ -50,7 +50,7 @@ public class GroovyAntMovey : MonoBehaviour
             extents, 0, LayerMask.GetMask("Ground"));
     }
     
-    void Update()
+    private void Update()
     {
         // Jump check
         if (isGrounded)
@@ -69,7 +69,7 @@ public class GroovyAntMovey : MonoBehaviour
     private void Flip()
     {
         facingRight = !facingRight;
-        Vector3 theScale = transform.localScale;
+        var theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
     }
@@ -77,14 +77,14 @@ public class GroovyAntMovey : MonoBehaviour
     private void Movement(float horizontal)
     {
         // Determine the plater velocity
-        float targetVelocityX = horizontal * MovementSpeed;
+        var targetVelocityX = horizontal * MovementSpeed;
         
         // Determine tha mount of force to apply to the player
-        float speedDifference = targetVelocityX - PlayerRigidbody.velocity.x;
-        float accelreationRate = (Mathf.Abs(targetVelocityX) < 0.01f) ? 0.5f : 0.8f;
+        var speedDifference = targetVelocityX - PlayerRigidbody.velocity.x;
+        var accelreationRate = (Mathf.Abs(targetVelocityX) < 0.01f) ? 0.5f : 0.8f;
         
         // Generate a general force to apply to the player
-        float movement = Mathf.Pow(Mathf.Abs(speedDifference) * accelreationRate, 2) * Mathf.Sign(speedDifference);
+        var movement = Mathf.Pow(Mathf.Abs(speedDifference) * accelreationRate, 2) * Mathf.Sign(speedDifference);
         
         // Apply the force to the player, only affects the x axis so we multiply by Vector2.right
         PlayerRigidbody.AddForce(movement * Vector2.right);
@@ -93,7 +93,7 @@ public class GroovyAntMovey : MonoBehaviour
         if (Mathf.Abs(horizontal) < 0.01f)
         {
             // The amount of friction to apply is the minimum of the friction value or the player's current velocity
-            float amount = Mathf.Min(Mathf.Abs(Friction), Mathf.Abs(PlayerRigidbody.velocity.x));
+            var amount = Mathf.Min(Mathf.Abs(Friction), Mathf.Abs(PlayerRigidbody.velocity.x));
             
             // Multiply the amount by the sign of the player's velocity in the x axis
             amount *= Mathf.Sign(PlayerRigidbody.velocity.x);
@@ -106,16 +106,23 @@ public class GroovyAntMovey : MonoBehaviour
     
     private void Jump()
     {
+        // Check if the player is already jumping or has been on the ground for less than 0.05 seconds
         if (isJumping || groundTime < 0.05F) return;
+        
         // Apply an impulse force upwards
         PlayerRigidbody.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
+        
+        // Set the jump flag
         isJumping = true;
+        
+        // Reset the ground time
         groundTime = 0;
     }
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
+        // Draw the jump check box
         Gizmos.DrawWireCube(transform.position - Vector3.down * JumpCheckDistance, extents);
     }
 }
