@@ -10,9 +10,10 @@ public class DestroyLeaf : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Collision Detected");
         if (collision.gameObject.CompareTag("Pickup"))
         {
-            Debug.Log("boop");
+            Debug.Log("Leaf Collected");
             leaves++;
             textLeaves.text = leaves.ToString();
             Destroy(collision.gameObject);

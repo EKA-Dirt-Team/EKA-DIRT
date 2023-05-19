@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f32ed511-7fe0-42e3-a5ed-5658de411202" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Daigas Super Foršā Spēle 2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Daigas Super Foršā Spēle 2.0/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/dads.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/dads.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DestroyLeaf.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DestroyLeaf.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GroovyAntMovey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GroovyAntMovey.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AntPickup.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2Pz2BTBLORNKjxpD0pOeGIulhrt" />
   <component name="ProjectViewState">
@@ -39,6 +46,14 @@
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Builds\EKA - DIRT.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Reinis\Daigas Super Foršā Spēle 2.0\Builds" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2020.3.30f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;C:\Users\Reinis\Daigas Super Foršā Spēle 2.0&quot; -debugCodeOptimization" />
@@ -65,10 +80,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="252440">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="252440" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -86,7 +101,7 @@
       <updated>1684445456945</updated>
       <workItem from="1684445460142" duration="82000" />
       <workItem from="1684445609951" duration="1213000" />
-      <workItem from="1684490158358" duration="94000" />
+      <workItem from="1684490158358" duration="9324000" />
     </task>
     <servers />
   </component>
