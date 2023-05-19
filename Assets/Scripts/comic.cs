@@ -1,49 +1,51 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
+using UnityEngine.UIElements;
+using Button = UnityEngine.UI.Button;
 
 public class comic : MonoBehaviour
 {
 	public Sprite vol1;
-	public Sprite vol3;
 	public Sprite vol2;
-	public Button first;
+	public Sprite vol3;
+	public Button imagedisplay;
+
 	private int slaids = 0;
 
-	
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 	public void ChangeButtonImage()
 	{
 		slaids += 1;
-		if (slaids == 1)
+		switch (slaids)
 		{
-			first.image.sprite = vol1;
-		}
-		
-		if (slaids == 2)
-		{
-			first.image.sprite = vol3;
-		}
-		if (slaids == 3)
-		{
-			first.image.sprite = vol2;
+			case 1:
+				imagedisplay.image.sprite = vol1;
+				break;
+			case 2:
+				imagedisplay.image.sprite = vol2;
+				break;
+			case 3:
+				imagedisplay.image.sprite = vol3;
+				break;
+			case 4:
+				StartCoroutine(FadeOut());
+				break;
 		}
 
-		if (slaids == 4)
+	}
+
+	private IEnumerator FadeOut()
+	{
+		for (float t = 0; t <= 1; t += Time.deltaTime)
 		{
-			SceneManager.LoadScene("dads");
+			Color newColor = imagedisplay.image.color;
+			newColor.a = Mathf.Lerp(1, 0, t);
+			imagedisplay.image.color = newColor;
+			yield return null;
 		}
+
+		SceneManager.LoadScene("dads");
 	}
 }

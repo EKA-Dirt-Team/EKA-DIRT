@@ -386,7 +386,7 @@ GameObject:
   - component: {fileID: 2115411446}
   - component: {fileID: 2115411445}
   m_Layer: 5
-  m_Name: first
+  m_Name: imagedisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -510,9 +510,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vol1: {fileID: 21300000, guid: 17e03f808e2602e4e86d20076b520206, type: 3}
-  vol3: {fileID: 21300000, guid: d0d299ca84fada34a964a9109858d203, type: 3}
   vol2: {fileID: 21300000, guid: 31d87d6160c3fa44a9a9c2b179a73e54, type: 3}
-  first: {fileID: 0}
+  vol3: {fileID: 21300000, guid: d0d299ca84fada34a964a9109858d203, type: 3}
+  imagedisplay: {fileID: 2115411445}
 --- !u!222 &2115411448
 CanvasRenderer:
   m_ObjectHideFlags: 0
