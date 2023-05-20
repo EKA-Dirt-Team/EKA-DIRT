@@ -42,14 +42,12 @@ public class Score : MonoBehaviour
             textLeavesGame.text = textString;
             textLeavesMenu.text = textString;
         }
-<<<<<<< HEAD
-=======
+
     }
 
     public bool canWin()
     {
         if (leaves >= maxleaves) return true;
         else return false;
->>>>>>> 49112f7a6457550cc6a8bfd8b0019650e37c4a33
     }
 }
