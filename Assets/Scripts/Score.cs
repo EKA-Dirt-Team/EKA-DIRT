@@ -1,4 +1,3 @@
-
 using System;
 using TMPro;
 using UnityEngine;
@@ -11,12 +10,12 @@ public class Score : MonoBehaviour
     public string winText = "You Win!";
     public GameObject TextUIText;
     public GameObject MenuUIText;
-    
+
     // Private Score Variables
     TextMeshProUGUI textLeavesGame;
     TextMeshProUGUI textLeavesMenu;
     private float leaves = 0;
-    
+
     // Start is called before the first frame update
     public void AddLeaf()
     {
@@ -43,5 +42,14 @@ public class Score : MonoBehaviour
             textLeavesGame.text = textString;
             textLeavesMenu.text = textString;
         }
+<<<<<<< HEAD
+=======
+    }
+
+    public bool canWin()
+    {
+        if (leaves >= maxleaves) return true;
+        else return false;
+>>>>>>> 49112f7a6457550cc6a8bfd8b0019650e37c4a33
     }
 }
