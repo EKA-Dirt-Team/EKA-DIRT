@@ -17,7 +17,7 @@ public class MenuOptions : MonoBehaviour
 
     private bool menu_visible = false;
     private bool audio_state = true;
-    
+
     private void Start()
     {
         menu.SetActive(menu_visible);
@@ -34,24 +34,34 @@ public class MenuOptions : MonoBehaviour
         }
     }
     
+    // Internal Functions
+    private static void PauseGame(bool game_paused)
+    {
+        Time.timeScale = game_paused ? 0 : 1;
+    }
+    
+    // Button Functions
+    
     public void ShowMenu()
     {
         Debug.Log("Menu Shown");
         menu_visible = !menu_visible;
-        
         menu.SetActive(menu_visible);
         gameUI.SetActive(!menu_visible);
+        PauseGame(menu_visible);
     }
-    
+
     public void MainMenu()
     {
         Debug.Log("Going to Main Menu");
+        PauseGame(false);
         SceneManager.LoadScene("MainMenu");
     }
 
     public void RestartLevel()
     {
         Debug.Log("Restarting Level");
+        PauseGame(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     

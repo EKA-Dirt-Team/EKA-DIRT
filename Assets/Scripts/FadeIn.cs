@@ -19,7 +19,7 @@ public class FadeIn : MonoBehaviour
     private IEnumerator FadeInFun()
     {
         BlackScreen.SetActive(true);
-        for (float t = 0; t <= 4; t += Time.deltaTime)
+        for (float t = 0; t <= 4; t += Time.unscaledDeltaTime)
         {
             var newColor = BlackScreenImage.color;
             newColor.a = Mathf.Lerp(1, 0, t);

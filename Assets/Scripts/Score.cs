@@ -43,8 +43,5 @@ public class Score : MonoBehaviour
             textLeavesGame.text = textString;
             textLeavesMenu.text = textString;
         }
-
-
-        
     }
 }
