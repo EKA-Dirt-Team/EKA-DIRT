@@ -5,17 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class winorlose : MonoBehaviour
 {
-    public void OnCollisionEnter2D(Collision2D collide)
+       public Score score;
+       public void OnCollisionEnter2D(Collision2D collide)
        {
            if (collide.gameObject.tag == "Player")
            {
-               Debug.Log ("you win");
-
-               //if (Score.canWin() = true)
-               // {
-               //     SceneManager.LoadScene("win screen");
-               //}
-               //else SceneManager.LoadScene("lose screen");
+               if (GameObject.Find("Counter").GetComponent<Score>().canWin() == true)
+               {
+                   //Debug.Log ("you win");
+                   SceneManager.LoadScene("win screen");
+               }
+               //else Debug.Log ("you lose");
+               else SceneManager.LoadScene("lose screen");
            }
        }
    
