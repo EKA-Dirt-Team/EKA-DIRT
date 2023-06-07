@@ -15,8 +15,7 @@ public class Score : MonoBehaviour
     TextMeshProUGUI textLeavesGame;
     TextMeshProUGUI textLeavesMenu;
     private float leaves = 0;
-
-    // Start is called before the first frame update
+    
     public void AddLeaf()
     {
         leaves++;
