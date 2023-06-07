@@ -12,6 +12,10 @@ public class PrefabSwitch : MonoBehaviour
     /// <summary>The string tag to use when replacing objects by tag.</summary>
     public string searchByTag;
 
+    public GameObject map;
+    public Material lightmaterial;
+    
+    
     /// <summary>Swaps all the game objects in oldGameObjects for 
     /// a new newPrefab.</summary>
     public void SwapAllByArray()
@@ -115,6 +119,14 @@ public class PrefabSwitchEditor : Editor
         {
             // if it is clicked, call the SwapAllByArray method from prefabSwitch.
             prefabSwitch.SwapAllByArray();
+        }
+
+        if (GUILayout.Button("Swap Material"))
+        {
+            for (int i = 0 ; i < prefabSwitch.map.transform.childCount; i++)
+            {
+                prefabSwitch.map.transform.GetChild(i).GetComponent<SpriteRenderer>().material = prefabSwitch.lightmaterial;
+            }
         }
     }
 }
