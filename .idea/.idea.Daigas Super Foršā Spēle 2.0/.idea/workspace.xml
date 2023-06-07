@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f32ed511-7fe0-42e3-a5ed-5658de411202" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Daigas Super Foršā Spēle 2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Daigas Super Foršā Spēle 2.0/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/dads.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/dads.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +105,7 @@
       <workItem from="1684586918818" duration="2168000" />
       <workItem from="1684590736782" duration="85000" />
       <workItem from="1685835448981" duration="1306000" />
+      <workItem from="1686159495513" duration="40000" />
     </task>
     <servers />
   </component>
