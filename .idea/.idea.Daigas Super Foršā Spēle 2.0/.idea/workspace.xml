@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f32ed511-7fe0-42e3-a5ed-5658de411202" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Daigas Super Foršā Spēle 2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Daigas Super Foršā Spēle 2.0/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PrefabSwitch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PrefabSwitch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +17,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FadeIn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LightShimmer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MenuOptions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PrefabSwitch.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Score.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ShowBackground.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -48,7 +49,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/Builds/EKA - DIRT.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Builds/Test2\EKA - DIRT.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Reinis\Daigas Super Foršā Spēle 2.0\Builds" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -107,6 +108,7 @@
       <workItem from="1684590736782" duration="85000" />
       <workItem from="1685835448981" duration="1306000" />
       <workItem from="1686159495513" duration="1176000" />
+      <workItem from="1686346101089" duration="2631000" />
     </task>
     <servers />
   </component>
