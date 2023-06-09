@@ -62,6 +62,6 @@ public class comic : MonoBehaviour
 			yield return null;
 		}
 
-		SceneManager.LoadScene("dads");
+		SceneManager.LoadScene("forestlvl");
 	}
 }
