@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using UnityEngine.UIElements;
@@ -8,12 +10,26 @@ using Button = UnityEngine.UI.Button;
 
 public class comic : MonoBehaviour
 {
+
+
+    void Start()
+    {
+        
+    }
+
+    void Update()
+    {
+        
+    }
+	
 	public Sprite vol1;
-	public Sprite vol2;
 	public Sprite vol3;
+	public Sprite vol2;
+	public Button first;
+	private int slaids = 0;
 	public Button imagedisplay;
 
-	private int slaids = 0;
+	
 	
 	public void ChangeButtonImage()
 	{
@@ -24,10 +40,10 @@ public class comic : MonoBehaviour
 				imagedisplay.image.sprite = vol1;
 				break;
 			case 2:
-				imagedisplay.image.sprite = vol2;
+				imagedisplay.image.sprite = vol3;
 				break;
 			case 3:
-				imagedisplay.image.sprite = vol3;
+				imagedisplay.image.sprite = vol2;
 				break;
 			case 4:
 				StartCoroutine(FadeOut());
