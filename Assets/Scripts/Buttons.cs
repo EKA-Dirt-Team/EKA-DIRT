@@ -13,6 +13,7 @@ public class Buttons : MonoBehaviour
 
     public void Back()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("MainMenu");
     }
+
 }
