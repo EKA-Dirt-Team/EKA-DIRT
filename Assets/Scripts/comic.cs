@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
